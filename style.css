@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--Offwhite);
+  padding: 20px;
+}
+section {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+  padding: 35px;
+  background: var(--White);
+  border-radius:  30px 30px 170px 30px;
+  box-shadow: 0 0 10px rgba(132, 130, 130, 0.1);
+  min-height: 50vh;
+}
+.top-input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.each{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+.each label{
+  font-size: 14px;
+  color: var(--Smokeygrey);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.each input{
+  width: 100%;
+  padding: 15px 10px;
+  border: 2px solid var(--Lightgrey);
+  border-radius: 5px;
+  outline: none;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#day.active,
+#month.active,
+#year.active{
+  border: 2px solid var(--Lightred);
+}
+.each input::placeholder{
+  color: var(--Smokeygrey);
+  font-size: 32px;
+  font-weight: 600;
+}
+.each input:focus{
+  border: 2px solid var(--Purple);
+}
+.each span{
+  width: 100%;
+  font-size: 12px;
+  color: var(--Lightred);
+  font-weight: 500;
+  display: none;
+}
+.btn-line{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-line hr{
+  width: 100%;
+  border: 1px solid var(--Lightgrey);
+  position: relative;
+}
+#btn{
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--Purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+}
+.output{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+.output h1{
+  font-size: 65px;
+  color: var(--Offblack);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.output span{
+  font-size: 65px;
+  color: var(--Purple);
+  font-weight: 700;
+}
+@media screen and (max-width: 454px){
+  body{
+    padding: 10px;
+  }
+  section{
+    padding: 15px;
+    border-radius:  30px 30px 100px 30px;
+  }
+  .each label{
+    font-size: 12px;
+  }
+  .each input{
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+  .each input::placeholder{
+    font-size: 20px;
+  }
+  #btn{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 402px){
+  .output h1{
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 311px){
+  .output h1{
+    font-size: 38px;
+  }
+}
